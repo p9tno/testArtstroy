@@ -1,0 +1,274 @@
+/* Header
+ ----------------------------------------------------------------------------- */
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	// z-index: 1;
+	z-index: 5;
+
+	padding: 0.625em 0 1em;
+
+	&_bg {
+		background-color: $color_dark;
+
+	}
+
+	&_leadmagnet {
+		.header__top {
+			justify-content: space-between;
+		}
+
+		.header__action {
+			@media (min-width: 768px) {
+				width: 48.75em;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		padding: 2.1875em 0 0;
+	}
+
+	&__content {
+		@extend .container_center;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 767px) {
+			position: relative;
+			z-index: 15;
+		}
+
+		@media (min-width: 768px) {
+			justify-content: space-between;
+			font-size: 1.05em;
+		}
+	}
+
+	&__logo {
+		margin-left: 0.25em;
+		@media (min-width: 768px) {
+			margin-left: 0;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__action {
+		text-align: center;
+		margin-left: 2.25em;
+
+		@media (min-width: 768px) {
+			text-align: inherit;
+			margin-left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 26.25em;
+		}
+	}
+
+	&__overflow {
+		@media (max-width: 767px) {
+			height: 100%;
+			overflow-y: auto;
+		}
+	}
+
+	&__bottom {
+		@media (max-width: 767px) {
+
+			position: fixed;
+			right: -100vw;
+			top: 0;
+			bottom: 0;
+			background-color: $color_dark;
+			width: 100vw;
+			z-index: 10;
+			overflow: hidden;
+			padding: 4.75em 1em 4em;
+			transition: right 0.2s;
+			box-shadow: 0 0 1em rgba(#000, .1);
+
+			height: 100vh;
+			// overflow-y: auto;
+
+			&_open {
+				right: 0;
+			}
+
+			// &:before {
+			// 	content: '';
+			// 	position: fixed;
+			// 	top: 0;
+			// 	left: 0;
+			// 	right: 0;
+			// 	height: 4em;
+			// 	background: linear-gradient(to bottom, $color_dark 10%, rgba($color_dark, 0.9));
+			// 	z-index: 1;
+			// }
+		}
+
+		@media (min-width: 768px) {
+			padding-top: 2.125em;
+			padding-bottom: 2.5em;
+			transition: 0.3s;
+
+			&.open_sub_menu {
+				padding-bottom: 5.625em;
+			}
+
+		}
+
+		.header__messenger {
+			margin-top: 4.875em;
+
+			.messenger {
+				flex-direction: column;
+			}
+
+			.messenger__label {
+				width: auto;
+				margin-right: 0;
+				margin-bottom: 0.375em;
+
+				span {
+					font-size: 0.625em;
+				}
+			}
+
+			.messenger__link {
+				font-size: 1.2em;
+			}
+		}
+
+		.header__calc {
+			margin-top: 1.875em;
+			text-align: center;
+
+			.calc__link {
+				font-size: 0.75em;
+			}
+		}
+	}
+
+	&__toggle {
+		position: absolute;
+
+		@media (max-width: 767px) {
+			top: 0.9em;
+			right: 1em;
+			padding: 0.75em 0.5em 0.5em;
+			z-index: 51;
+			cursor: pointer;
+			transform: rotate(0);
+			transition: 0.2s;
+			color: $color_white;
+
+			&_open {
+				position: fixed;
+				transform: rotate(90deg);
+				color: $color_warning;
+			}
+		}
+
+		.toggle {
+
+			@media (max-width: 767px) {
+				position: relative;
+				width: 0.9375em;
+				height: 0.875em;
+				border: 0.18em solid;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 0;
+				transition: 0.2s;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					border-top: 0.18em solid;
+					width: 0.625em;
+					position: absolute;
+					top: 50%;
+					margin-top: -0.09em;
+					left: 0;
+				}
+
+			}
+		}
+
+	}
+
+}
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 20;
+	background-color: $color_dark;
+	padding: 1em 0;
+
+	@media (min-width: 768px) {
+		padding: 1em 0 0;
+
+	}
+
+	.header__bottom {
+
+		@media (min-width: 768px) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		&.open_sub_menu {
+			padding-bottom: 3.125em;
+		}
+
+	}
+
+	@media (min-width: 768px) {
+		.header__top {
+			display: none;
+		}
+
+		.menu {
+			> .menu-item {
+				padding-bottom: 1em;
+			}
+		}
+
+	}
+
+	.header__toggle {
+		top: 1.2em;
+	}
+
+	-webkit-animation-name: showMenu;
+	animation-name: showMenu;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes showMenu {
+	0% {
+		opacity: 0.5;
+		transform: translateY(-4em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0em);
+	}
+}

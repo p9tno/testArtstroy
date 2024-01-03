@@ -1,0 +1,92 @@
+@import 'mixins/mixin'; // Fonts
+// Import files
+@import 'variables/variables';
+@import 'core/fonts';
+@import "../fonts/icon/style.css";
+@import 'core/reset';
+@import 'core/template';
+@import 'core/preloader';
+@import 'core/preloaderFilter';
+
+@import 'core/header';
+@import 'core/navbar';
+
+@import 'section/firstscreen';
+@import 'section/runningLine';
+@import 'section/founder';
+@import 'section/certificate';
+@import 'section/task';
+@import 'section/presentation';
+@import 'section/projects';
+@import 'section/honest';
+@import 'section/location';
+@import 'section/advantage';
+@import 'section/reviews';
+@import 'section/logos';
+@import 'section/news';
+@import 'section/blog';
+@import 'section/consultation';
+@import 'section/content';
+@import 'section/quiz';
+@import 'section/report';
+@import 'section/approach';
+@import 'section/team';
+@import 'section/videoWork';
+@import 'section/singleBlog';
+@import 'section/project';
+@import 'section/otherProjects';
+@import 'section/steps';
+@import 'section/partOfTeam';
+@import 'section/teamSliders';
+@import 'section/vacancies';
+@import 'section/provider';
+@import 'section/contacts';
+@import 'section/request';
+@import 'section/levelDesign';
+@import 'section/muchMore';
+@import 'section/details';
+@import 'section/docount';
+@import 'section/personalManager';
+@import 'section/information';
+@import 'section/gifts';
+@import 'section/faq';
+@import 'section/facts';
+@import 'section/stages';
+@import 'section/price';
+@import 'section/performance';
+@import 'section/ourhouses';
+@import 'section/largeSlider';
+@import 'section/mortgage';
+@import 'section/portfolio';
+
+@import 'section/head';
+
+@import 'core/footer';
+@import 'core/parts';
+
+@import 'core/form';
+@import 'core/lowerpanel';
+@import 'core/clip';
+@import 'core/toTop';
+@import 'core/cat-list';
+
+// ----------------------------------------
+
+@import 'core/breadcrumb';
+@import 'core/pagination';
+
+// ----------------------------------------
+
+@import 'core/buttons';
+
+@import 'core/video';
+@import 'core/collapse';
+@import 'core/tabs';
+
+@import 'vendor/modal';
+@import 'vendor/swiper';
+
+.test {
+    padding-top: 20em;
+}
+

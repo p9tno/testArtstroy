@@ -1,0 +1,392 @@
+.logo {
+    display: block;
+    width: 5em;
+    height: 1.25em;
+    @media (min-width: 768px) {
+        width: 11.875em;
+        height: 3.125em;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        width: 9.5em;
+        margin-left: 2.5em;
+        letter-spacing: 0.03em;
+        line-height: 1;
+
+        span {
+            font-size: 0.75em;
+            color: $color_white;
+        }
+    }
+
+}
+
+.messenger {
+    display: flex;
+    align-items: center;
+    color: $color_white;
+
+    &__label {
+        width: 7.125em;
+        letter-spacing: 0.02em;
+        line-height: 1.25;
+        margin-right: 1em;
+
+        span {
+            font-size: 0.875em;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0 0.3125em;
+    }
+
+    &__link {
+
+        color: $color_white;
+        text-decoration: none;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25em;
+            height: 2.25em;
+            border-radius: 50%;
+            font-size: 0.8334em;
+
+            @media (min-width: 768px) {
+                font-size: 1em;
+                transform: scale(1);
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+
+        .icon_telegram {
+            background-color: #05A0EB;
+        }
+
+        .icon_whatsapp {
+            background-color: #20C863;
+        }
+
+        .icon_viber {
+            background-color: #746FBB;
+        }
+
+        .icon_youtube {
+            background-color: #FF2600;
+        }
+
+        .icon_wk {
+            background-color: #01A7EE;
+        }
+
+        .icon_insta {
+            background: linear-gradient(49.12deg, #FFDD55 7.02%, #FF543E 50.45%, #C837AB 93.88%);
+        }
+
+    }
+
+    @media (min-width: 768px) {
+        &_large {
+            .messenger__link {
+                i {
+                    font-size: 1.3334em;
+                }
+            }
+        }
+
+        &_medium {
+            .messenger__link {
+                i {
+                    font-size: 1.2223em;
+                }
+            }
+        }
+    }
+
+}
+
+.phone {
+    margin-top: -0.5em;
+    @media (min-width: 768px) {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    &__label {
+        letter-spacing: 0.03em;
+        margin-bottom: -0.125em;
+        @media (min-width: 768px) {
+            margin-bottom: 1em;
+        }
+
+        span {
+            color: #989898;
+            font-size: 0.5em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+    }
+
+    &__link {
+        letter-spacing: 0.02em;
+
+        a {
+            font-weight: 500;
+            text-decoration: none;
+            color: $color_white;
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+
+            &:hover {
+                color: $color_warning;
+            }
+        }
+    }
+
+}
+
+.callback {
+    letter-spacing: 0.1em;
+    margin-top: -0.35em;
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color_white;
+        font-weight: 500;
+        font-size: 0.375em;
+        /* 6/16 */
+
+        @media (min-width: 768px) {
+            font-size: 0.75em;
+        }
+
+        &:after {
+            display: inline-block;
+            content: '\e901';
+            font-family: 'icomoon';
+            color: $color_warning;
+            margin-left: 0.5em;
+
+            @media (min-width: 768px) {
+                margin-left: 1em;
+                transform: scale(1);
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:hover {
+                color: $color_warning;
+
+                &:after {
+                    -webkit-animation: scale 0.5s linear alternate infinite;
+                    animation: scale 0.5s linear alternate infinite;
+                }
+            }
+        }
+
+    }
+
+}
+@media (min-width: 768px) {
+    @keyframes scale {
+        100% {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.calc {
+    letter-spacing: 0.1em;
+
+    &__link {
+        text-decoration: none;
+        color: $color_white;
+        font-size: 0.75em;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &:after {
+            display: inline-block;
+            content: '\e920';
+            font-family: 'icomoon';
+            font-size: 0.75em;
+            color: $color_warning;
+            margin-left: 1em;
+            transform: rotate(0);
+            transition: 0.3s;
+
+        }
+
+        &:hover {
+            color: $color_warning;
+
+            &:after {
+                transform: rotate(45deg);
+
+            }
+        }
+    }
+
+}
+
+// .city {
+//     letter-spacing: 0.03em;
+//     margin-bottom: -0.75em;
+//
+//     &__label {
+//         span {
+//             font-size: 0.875em;
+//             color: $color_white;
+//         }
+//     }
+//
+//     .menu-item-has-children > a {
+//         font-size: 0.875em;
+//         color: $color_warning;
+//         text-transform: none;
+//
+//         i {
+//             font-size: 0.5em;
+//             margin-left: 1.25em;
+//         }
+//     }
+//
+// }
+
+.city {
+    letter-spacing: 0.03em;
+    margin-bottom: -0.75em;
+
+    &__label {
+        span {
+            font-size: 0.875em;
+            color: $color_white;
+        }
+    }
+
+    &__menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        > .city__item {
+            padding-bottom: 0.75em;
+            letter-spacing: 0.1em;
+
+            > a {
+                position: relative;
+                color: $color_white;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                font-size: 0.875em;
+                font-weight: 500;
+
+                i {
+                    color: inherit;
+                    position: absolute;
+                    top: 50%;
+                    right: -3em;
+                    transform: translateY(-50%) scale(1);
+                    font-size: 0.5em;
+                    transition: transform 0.2s;
+                }
+
+            }
+
+            &:hover {
+                > a {
+                    color: $color_warning;
+                }
+
+                i {
+                    transform: translateY(-50%) scale(-1);
+                }
+            }
+
+        }
+    }
+
+    &__submenu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        width: max-content;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        top: 140%;
+        left: 0;
+        transition: 0.3s;
+        z-index: 10;
+
+        a {
+            display: block;
+            font-size: 0.75em;
+            font-weight: 500;
+            padding: 0.75em 1.5em;
+            border: 0.0625em solid $color_warning;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color_white;
+            background-color: $color_warning;
+
+            &:hover {
+                background-color: $color_dark;
+            }
+        }
+    }
+
+    &__item {}
+
+    &__item_haschildren {
+        position: relative;
+        padding-right: 2em;
+        margin-right: -2em;
+        // cursor: pointer;
+
+        &:hover {
+            .city__submenu {
+                height: auto;
+                opacity: 1;
+                top: 100%;
+                visibility: visible;
+            }
+        }
+    }
+
+}

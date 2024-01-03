@@ -1,0 +1,46 @@
+.collapse {
+    &__title {
+        line-height: 1;
+        width: fit-content;
+        letter-spacing: 0.02em;
+
+        span {
+            font-size: 1em;
+            color: $color_warning;
+
+            text-decoration: none;
+            color: $color_warning;
+            font-size: 0.75em;
+            font-weight: 500;
+            cursor: pointer;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '\e920';
+                font-family: 'icomoon';
+                font-size: 0.5em;
+                margin-left: 0.75em;
+                transform: rotate(45deg);
+            }
+        }
+
+        &.open {
+            span {
+                &:after {
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+}
