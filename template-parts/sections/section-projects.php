@@ -28,7 +28,7 @@
     <?php } ?>
 
 
-    <div class="projects__wrap">
+    <div class="portfolio__grid portfolio__grid_right">
 
         <?php
             $project_id = get_field('projects_relations');
@@ -43,7 +43,10 @@
         ?>
         
         <?php if ($project->have_posts()) : while ($project->have_posts()) : $project->the_post(); ?>
-            <?php get_template_part( 'template-parts/project/content', 'item' ); ?>
+            <?php 
+                //get_template_part( 'template-parts/project/content', 'item' );
+                get_template_part( 'template-parts/project/content', 'house' ); 
+            ?>
         <?php endwhile; ?>
         
         <?php else : ?>
@@ -57,7 +60,7 @@
     <div class="container_center container_center_sm">
         <div class="projects__action">
             <div class="projects__load">
-                <a class="load_more show_more_js" href="#" data-load="Загрузкка" data-more="Смотреть еще">Смотреть еще 4 работы</a>
+                <a class="load_more show_more_js" href="#" data-load="Загрузкка" data-more="Смотреть еще">Смотреть еще работы</a>
             </div>
             <?php if (get_field('projects_buton')) { ?>
                 <div class="projects__buton">

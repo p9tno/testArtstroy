@@ -10325,6 +10325,13 @@ body {
   .portfolio__grid .otherProjects__item {
     font-size: 0.75em;
   }
+  .portfolio__grid_right {
+    width: 113.75em;
+    margin-left: auto;
+  }
+  .portfolio__grid_right .otherProjects__item {
+    font-size: 0.9475em;
+  }
 }
 .portfolio__cat {
   margin-bottom: 2.25em;

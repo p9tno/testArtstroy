@@ -114,7 +114,7 @@
                     <?php if (get_field('project_square')) { ?>
                         <div class="description__item">
                             <div class="description__label"><span>Площадь:</span></div>
-                            <div class="description__data"><span><?php the_field('project_square'); ?> м<sup>2</sup></span></div>
+                            <div class="description__data"><span><?php echo number_format(get_field('project_square'), 0, '.', ' '); ?> м<sup>2</sup></span></div>
                         </div>
                     <?php } ?>
     
@@ -148,8 +148,8 @@
     
                     <?php if (get_field('project_cost_work')) { ?>
                         <div class="description__item">
-                            <div class="description__label"><span>Стомость работ:</span></div>
-                            <div class="description__data"><span><?php the_field('project_cost_work'); ?></span></div>
+                            <div class="description__label"><span>Цена за м<sup>2</sup>:</span></div>
+                            <div class="description__data"><span><?php echo number_format(get_field('project_cost_work'), 0, '.', ' '); ?></span></div>
                         </div>
                     <?php } ?>
 

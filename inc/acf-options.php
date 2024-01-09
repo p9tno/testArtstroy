@@ -3636,7 +3636,7 @@ function my_template_acf_mataboxes(){
             ),
             array(
                 'key' => 'project_time',
-                'label' => 'Срок ремонта:',
+                'label' => 'Срок реализации:',
                 'name' => 'project_time',
                 'type' => 'text',
                 'required' => 1,
@@ -3694,9 +3694,9 @@ function my_template_acf_mataboxes(){
             ),
             array(
                 'key' => 'project_cost_work',
-                'label' => 'Стомость работ:',
+                'label' => 'Стомость работ за м2',
                 'name' => 'project_cost_work',
-                'type' => 'text',
+                'type' => 'number',
                 'wrapper' => array (
                     'width' => '25',
                 ),
@@ -3705,7 +3705,7 @@ function my_template_acf_mataboxes(){
                 'key' => 'project_square',
                 'label' => 'Площадь ремонта:',
                 'name' => 'project_square',
-                'type' => 'text',
+                'type' => 'number',
                 'wrapper' => array (
                     'width' => '25',
                 ),

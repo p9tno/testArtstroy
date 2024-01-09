@@ -26,7 +26,7 @@
         </ul>
     </div>
 
-    <div class="projects__wrap">
+    <div class="portfolio__grid portfolio__grid_right">
 
 
 
@@ -53,7 +53,7 @@
                 $portfolio_cat = new WP_Query($args);
 
                 if ($portfolio_cat->have_posts()) : while ($portfolio_cat->have_posts()) : $portfolio_cat->the_post();
-                    get_template_part( 'template-parts/project/content', 'item' );
+                    get_template_part( 'template-parts/project/content', 'house' );
                 endwhile;
                 else :
                     echo 'В этой категории нет записей, вероятно.';
@@ -63,7 +63,7 @@
                 // PORTFOLIO
                 if ( have_posts() ) : 
                     while ( have_posts() ) : the_post();
-                        get_template_part( 'template-parts/project/content', 'item' );
+                        get_template_part( 'template-parts/project/content', 'house' );
                     endwhile;
                 else:
                     echo 'В этой категории нет записей, вероятно.';

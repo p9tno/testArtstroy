@@ -25,9 +25,20 @@
         }
     }
 
+   
+
+    $show_more = '';
+    if (is_page_template(['template-homepage.php'])) {
+        $show_more = 'projects_more_js';
+    }
+    // if (!is_archive()) {
+    //     $show_more = 'projects_more_js';
+    // }
+    
+
 ?>
 
-<div class="otherProjects__item">
+<div class="otherProjects__item <?php echo $show_more; ?>">
 
     <div class="swiper otherProjects__slider otherProjects-swiper-js">
         <div class="swiper-wrapper">
@@ -69,23 +80,42 @@
         </div>
 
         <div class="otherProjects__bottom">
-            <ul class="list">
-                <?php if (get_field('house_square')) { ?>
-                    <li><small>Площадь:</small><span><?php echo number_format(get_field('house_square'), 0, '.', ' '); ?> м<sup>2</sup></span></li>
-                <?php } ?>
+
+            <?php if( has_term('stroitelstvo-domov', 'portfolio-cat') ) { ?>
+                <!-- house -->
+                <ul class="list">
+                    <?php if (get_field('house_square')) { ?>
+                        <li><small>Площадь:</small><span><?php echo number_format(get_field('house_square'), 0, '.', ' '); ?> м<sup>2</sup></span></li>
+                    <?php } ?>
+        
+                    <?php if ($houses_floor) { ?>
+                        <li><small>Кол-во этажей:</small><span><?php echo $houses_floor; ?></span></li>
+                    <?php } ?>
     
-                <?php if ($houses_floor) { ?>
-                    <li><small>Кол-во этажей:</small><span><?php echo $houses_floor; ?></span></li>
-                <?php } ?>
+                    <?php if ($houses_bedroom) { ?>
+                        <li><small>Кол-во спален:</small><span><?php echo $houses_bedroom; ?></span></li>
+                    <?php } ?>
+    
+                    <?php if (get_field('project_house_price')) { ?>
+                        <li><small>Стоимость:</small><span><?php echo number_format(get_field('project_house_price'), 0, '.', ' '); ?></span></li>
+                    <?php } ?>
+                </ul>
+            <?php } else { ?>
+                <ul class="list">
+                    <?php if (get_field('project_square')) { ?>
+                        <li><small>Площадь:</small><span><?php echo number_format(get_field('project_square'), 0, '.', ' '); ?> м<sup>2</sup></span></li>
+                    <?php } ?>
 
-                <?php if ($houses_bedroom) { ?>
-                    <li><small>Кол-во спален:</small><span><?php echo $houses_bedroom; ?></span></li>
-                <?php } ?>
-
-                <?php if (get_field('project_house_price')) { ?>
-                    <li><small>Стоимость:</small><span><?php echo number_format(get_field('project_house_price'), 0, '.', ' '); ?></span></li>
-                <?php } ?>
-            </ul>
+                    <?php if (get_field('project_time')) { ?>
+                        <li><small>Срок реализации:</small><span><?php the_field('project_time'); ?></span></li>
+                    <?php } ?>
+        
+                    <?php if (get_field('project_cost_work')) { ?>
+                        <li><small>Цена за м<sup>2</sup></small><span><?php echo number_format(get_field('project_cost_work'), 0, '.', ' '); ?></span></li>
+                    <?php } ?>
+                </ul>
+                    
+            <?php } ?>
 
         </div>
 

@@ -489,8 +489,8 @@ $(document).ready(function() {
 
     function showMore() {
         let count = $('.projects_more_js').length,
-        start = 4,
-        show = 4;
+        start = 6,
+        show = 6;
 
         // console.log('count: ' + count);
         // console.log('start: ' + start);

@@ -16,7 +16,7 @@ get_template_part( 'template-parts/sections/section', 'task' );
 
 // get_template_part( 'template-parts/sections/section', 'presentation' ); 
 
-// get_template_part( 'template-parts/sections/section', 'projects' ); 
+get_template_part( 'template-parts/sections/section', 'projects' ); 
 // get_template_part( 'template-parts/sections/section', 'honest' ); 
 // get_template_part( 'template-parts/sections/section', 'advantage' ); 
 // get_template_part( 'template-parts/sections/section', 'location' ); 
